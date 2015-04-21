@@ -15,8 +15,8 @@ Module.expectedDataFileDownloads++;
       // worker
       PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
     }
-    var PACKAGE_NAME = 'hanuman_to_the_rescue.data';
-    var REMOTE_PACKAGE_BASE = 'hanuman_to_the_rescue.data';
+    var PACKAGE_NAME = 'Hanuman.data';
+    var REMOTE_PACKAGE_BASE = 'Hanuman.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -24,8 +24,8 @@ Module.expectedDataFileDownloads++;
     var REMOTE_PACKAGE_NAME = typeof Module['locateFile'] === 'function' ?
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
-    var REMOTE_PACKAGE_SIZE = 5962815;
-    var PACKAGE_UUID = '88f11975-621a-4b9a-bee2-1551ec6538e1';
+    var REMOTE_PACKAGE_SIZE = 15984673;
+    var PACKAGE_UUID = 'b5e9763f-461a-4f2d-be0a-1c8ea80a25bf';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -123,12 +123,11 @@ Module['FS_createPath']('/', 'Resources', true, true);
         this.requests[this.name] = null;
       },
     };
-      new DataRequest(0, 164124, 0, 0).open('GET', '/mainData');
-    new DataRequest(164124, 164145, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
-    new DataRequest(164145, 3552925, 0, 0).open('GET', '/sharedassets0.assets');
-    new DataRequest(3552925, 3888335, 0, 0).open('GET', '/sharedassets0.resource');
-    new DataRequest(3888335, 5448707, 0, 0).open('GET', '/Resources/unity_default_resources');
-    new DataRequest(5448707, 5962815, 0, 0).open('GET', '/Resources/unity_builtin_extra');
+      new DataRequest(0, 2522500, 0, 0).open('GET', '/mainData');
+    new DataRequest(2522500, 2522521, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
+    new DataRequest(2522521, 13910193, 0, 0).open('GET', '/sharedassets0.assets');
+    new DataRequest(13910193, 15470565, 0, 0).open('GET', '/Resources/unity_default_resources');
+    new DataRequest(15470565, 15984673, 0, 0).open('GET', '/Resources/unity_builtin_extra');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
@@ -141,13 +140,12 @@ Module['FS_createPath']('/', 'Resources', true, true);
           DataRequest.prototype.requests["/mainData"].onload();
           DataRequest.prototype.requests["/methods_pointedto_by_uievents.xml"].onload();
           DataRequest.prototype.requests["/sharedassets0.assets"].onload();
-          DataRequest.prototype.requests["/sharedassets0.resource"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Resources/unity_builtin_extra"].onload();
-          Module['removeRunDependency']('datafile_hanuman_to_the_rescue.data');
+          Module['removeRunDependency']('datafile_Hanuman.data');
 
     };
-    Module['addRunDependency']('datafile_hanuman_to_the_rescue.data');
+    Module['addRunDependency']('datafile_Hanuman.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
